@@ -14,7 +14,7 @@ var t,e=arguments[3];!function(e,n){"object"==typeof exports&&"undefined"!=typeo
 },{}],"AjW3":[function(require,module,exports) {
 
 },{}],"eQwa":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;const e="https://pixabay.com/api/?image_type=photo&orientation=horizontal",t="22870491-0414a720e7578a2aeb94b7ded";class r{constructor(){this.searchQuery="",this.page=1}fetchApi(){const r=`${e}&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${t}`;return fetch(r).then(e=>{if(!e.ok)throw new Error(console.log("Error"));return e.json()}).then(({hits:e})=>0===e.length?"error":(this.incrementPage(),e))}incrementPage(){this.page+=1}resetPage(){this.page=1}get query(){return this.searchQuery}set query(e){this.searchQuery=e}}exports.default=r;
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=void 0;const e="https://pixabay.com/api/?image_type=photo&orientation=horizontal",t="22870491-0414a720e7578a2aeb94b7ded";class r{constructor(){this.searchQuery="",this.page=1}fetchApi(){const r=`${e}&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${t}`;return fetch(r).then(e=>{if(!e.ok)throw new Error(console.log("Error"));return e.json()}).then()}incrementPage(){this.page+=1}resetPage(){this.page=1}get query(){return this.searchQuery}set query(e){this.searchQuery=e}}exports.default=r;
 },{}],"VyiV":[function(require,module,exports) {
 "use strict";function e(){return{cardContainer:document.querySelector(".js-gallery-container"),searchForm:document.querySelector(".search-form"),input:document.querySelector(".form-control"),sentinel:document.querySelector("#observer")}}Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=e;
 },{}],"BNjD":[function(require,module,exports) {
@@ -28,4 +28,4 @@ var e,n=arguments[3];!function(t){"object"==typeof exports&&"undefined"!=typeof 
 },{"lodash.debounce":"PZFh","../templates/markup-card.hbs":"IrQX","@pnotify/core":"txz9","@pnotify/core/dist/PNotify.css":"AjW3","@pnotify/core/dist/Material.css":"AjW3","@pnotify/core/dist/BrightTheme.css":"AjW3","./apiService.js":"eQwa","./refs.js":"VyiV","./lightbox.js":"bLn9"}],"Focm":[function(require,module,exports) {
 "use strict";require("./js/fetch-api.js"),require("./sass/main.scss");
 },{"./js/fetch-api.js":"ye0o","./sass/main.scss":"AjW3"}]},{},["Focm"], null)
-//# sourceMappingURL=/goit-js-hw-13-image-finder/src.4056bc1c.js.map
+//# sourceMappingURL=/goit-js-hw-13-image-finder/src.7792a239.js.map
