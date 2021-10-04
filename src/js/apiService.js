@@ -16,13 +16,13 @@ export default class NewsApiService {
         }
         return response.json();
       })
-      .then(/*({ hits }) => {
+      .then(({ hits }) => {
         if (hits.length === 0) {
           return 'error';
         }
         this.incrementPage();
         return hits;
-      }*/);
+      });
   }
 
   incrementPage() {
