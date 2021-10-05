@@ -11,10 +11,8 @@ export default class NewsApiService {
     const url = `${BASE_URL}&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${API_KEY}`;
     return fetch(url)
       .then(response => {
-        if (!response.ok) {
+        if (!response.ok) return response.json();
           throw new Error(console.log('Error'));
-        }
-        return response.json();
       })
       .then(({ hits }) => {
         if (hits.length === 0) {
@@ -23,6 +21,7 @@ export default class NewsApiService {
         this.incrementPage();
         return hits;
       });
+    .cath(err=>console.error('Error ',err));
   }
 
   incrementPage() {
