@@ -23,11 +23,24 @@ export default class NewsApiService {
       });
     .cath(err=>console.error('Error ',err));
   }
+  newApiServise
+  .fetcApi()
+    if(!response) return;
+
+     renderCard(respons);
+})
+    .cath(
+      error({
+        text:'Попробуй кщк разок'
+        })
+     (refs.input.valua=''),
+      
+);
 
   incrementPage() {
     this.page += 1;
   }
-
+ }
   resetPage() {
     this.page = 1;
   }
@@ -40,3 +53,5 @@ export default class NewsApiService {
     this.searchQuery = newQuery;
   }
 }
+
+
