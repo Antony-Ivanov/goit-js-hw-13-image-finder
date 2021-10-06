@@ -46,10 +46,10 @@ function toSearch(e) {
 
   newsApiService
     .fetchApi()
-    .then(response => {
+    if(!response) return;
       renderCard(response);
     })
-    .catch(err => console.log(err));
+    .catch(error({text:'Попробуй еще раз'})(refs.input.value=''),);
 }
 
 function renderCard(query) {
